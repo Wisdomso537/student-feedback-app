@@ -1,0 +1,34 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Feedback</title>
+</head>
+
+<body>
+
+    <h1>STUDENT FEEDBACK</h1>
+
+    {% for feedback in feedbacks %}
+
+    <h2>{{ feedback.student_name }}</h2>
+
+    <p>Course: {{ feedback.course }}</p>
+
+    <p>Rating: {{ feedback.rating }}</p>
+
+    <p>"{{ feedback.comment }}"</p>
+
+    <hr>
+
+    {% empty %}
+
+    <p>No feedback has been submitted yet.</p>
+
+    {% endfor %}
+
+</body>
+
+</html>
+```
